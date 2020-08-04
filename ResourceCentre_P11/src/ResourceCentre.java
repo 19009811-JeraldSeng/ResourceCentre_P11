@@ -5,6 +5,10 @@ public class ResourceCentre {
 	/**
 	 * 
 	 */
+	private static final int OPTION_RETURNITEM = 4;
+	/**
+	 * 
+	 */
 	private static final int OPTION_LOANITEMS = 3;
 	/**
 	 * 
@@ -64,6 +68,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
+			//Syakir
 			} else if (option == OPTION_LOANITEMS) {
 				// Loan item
 				ResourceCentre.setHeader("LOAN");			
@@ -82,8 +87,8 @@ public class ResourceCentre {
 				} else {
 					System.out.println("Invalid type");
 				}
-
-			} else if (option == 4) {
+			//Syakir
+			} else if (option == OPTION_RETURNITEM) {
 				// Return item
 				ResourceCentre.setHeader("RETURN");				
 				ResourceCentre.setHeader("ITEM TYPES");
