@@ -22,6 +22,7 @@ public class ResourceCentre {
 	 * 
 	 */
 	private static final int END_LOOP = 5;
+
 	public static void main(String[] args) {
 
 		ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
@@ -33,13 +34,13 @@ public class ResourceCentre {
 		chromebookList.add(new Chromebook("CB002", "HP Chromebook", "Win 10"));
 
 		int option = 0;
-		//Syakir
+		// Syakir
 		while (option != END_LOOP) {
 
 			ResourceCentre.resourceCentreMenu();
 			option = Helper.readInt("Enter an option > ");
 
-			//Syakir
+			// Syakir
 			if (option == OPTION_VIEWALLITEMS) {
 				// View all items
 				ResourceCentre.viewAllCamcorder(camcorderList);
@@ -68,7 +69,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			//Syakir
+				// Syakir
 			} else if (option == OPTION_LOANITEMS) {
 				// Loan item
 				ResourceCentre.setHeader("LOAN");
@@ -87,7 +88,7 @@ public class ResourceCentre {
 				} else {
 					System.out.println("Invalid type");
 				}
-			//Syakir
+				// Syakir
 			} else if (option == OPTION_RETURNITEM) {
 				// Return item
 				ResourceCentre.setHeader("RETURN");
@@ -115,8 +116,8 @@ public class ResourceCentre {
 		}
 
 	}
-	
-	//Syakir
+
+	// Syakir
 	public static void resourceCentreMenu() {
 		ResourceCentre.setHeader("RESOURCE CENTRE APP");
 		System.out.println("1. Display Inventory");
@@ -134,20 +135,9 @@ public class ResourceCentre {
 		Helper.line(80, "-");
 	}
 
-	public static String showAvailability(boolean isAvailable) {
-		String avail;
-
-		if (isAvailable == true) {
-			avail = "Yes";
-		} else {
-			avail = "No";
-		}
-		return avail;
-	}
-
 	// ================================= Option 1 View
 	// =================================
-	//Jerald
+	// Jerald
 	public static String retrieveAllCamcorder(ArrayList<Camcorder> camcorderList) {
 		String output = "";
 
@@ -164,18 +154,15 @@ public class ResourceCentre {
 		output += retrieveAllCamcorder(camcorderList);
 		System.out.println(output);
 	}
-
+	// Jerald
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
-		// write your code here
-		for (int i = 0; i < chromebookList.size(); i++) {
 
-			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
-					chromebookList.get(i).getDescription(),
-					ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable()),
-					chromebookList.get(i).getDueDate(), chromebookList.get(i).getOs());
+		for (int i = 0; i < chromebookList.size(); i++) {
+			output += String.format("\n%s", chromebookList.get(i).toString());
 		}
 		return output;
+
 	}
 
 	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
