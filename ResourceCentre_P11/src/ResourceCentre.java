@@ -131,7 +131,7 @@ public class ResourceCentre {
 		for (int i = 0; i < camcorderList.size(); i++) {
 			output += String.format("\n%s", camcorderList.get(i).toString());
 		}
-		return output;
+		return output
 	}
 
 	public static void viewAllCamcorder(ArrayList<Camcorder> camcorderList) {
