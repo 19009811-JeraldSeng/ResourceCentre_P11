@@ -21,12 +21,13 @@ public class ResourceCentre {
 		chromebookList.add(new Chromebook("CB002", "HP Chromebook", "Win 10"));
 
 		int option = 0;
-
+		//Syakir
 		while (option != END_LOOP) {
 
-			ResourceCentre.menu();
+			ResourceCentre.resourceCentreMenu();
 			option = Helper.readInt("Enter an option > ");
 
+			//Syakir
 			if (option == OPTION_VIEWALLITEMS) {
 				// View all items
 				ResourceCentre.viewAllCamcorder(camcorderList);
@@ -101,8 +102,9 @@ public class ResourceCentre {
 		}
 
 	}
-
-	public static void menu() {
+	
+	//Syakir
+	public static void resourceCentreMenu() {
 		ResourceCentre.setHeader("RESOURCE CENTRE APP");
 		System.out.println("1. Display Inventory");
 		System.out.println("2. Add item");
