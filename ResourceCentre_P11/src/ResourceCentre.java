@@ -5,6 +5,10 @@ public class ResourceCentre {
 	/**
 	 * 
 	 */
+	private static final int OPTION_LOANITEMS = 3;
+	/**
+	 * 
+	 */
 	private static final int OPTION_ADDALLITEMS = 2;
 	/**
 	 * 
@@ -60,7 +64,7 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == 3) {
+			} else if (option == OPTION_LOANITEMS) {
 				// Loan item
 				ResourceCentre.setHeader("LOAN");			
 				ResourceCentre.setHeader("ITEM TYPES");
