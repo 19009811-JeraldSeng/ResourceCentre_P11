@@ -12,6 +12,7 @@ public class Camcorder extends Item {
 	}
 
 	public String toString() {
+		// Jerald
 		String info = super.toString();
 		return String.format("%-63s %-20d", info, getOpticalZoom());
 	}
