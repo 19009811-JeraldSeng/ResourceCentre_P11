@@ -5,11 +5,11 @@ public class ResourceCentre {
 	/**
 	 * 
 	 */
-	private static final int ADD_ALLITEMS = 2;
+	private static final int ADD_NEWCAMCORDER = 1;
 	/**
 	 * 
 	 */
-	private static final int VIEW_ALLITEMS = 1;
+	private static final int OPTION_VIEWALLITEMS = 1;
 	public static void main(String[] args) {
 
 		ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
@@ -27,12 +27,12 @@ public class ResourceCentre {
 			ResourceCentre.menu();
 			option = Helper.readInt("Enter an option > ");
 
-			if (option == VIEW_ALLITEMS) {
+			if (option == OPTION_VIEWALLITEMS) {
 				// View all items
 				ResourceCentre.viewAllCamcorder(camcorderList);
 				ResourceCentre.viewAllChromebook(chromebookList);
 
-			} else if (option == ADD_ALLITEMS) {
+			} else if (option == 2) {
 				// Add a new item
 				ResourceCentre.setHeader("ADD");			
 				ResourceCentre.setHeader("ITEM TYPES");
@@ -41,7 +41,7 @@ public class ResourceCentre {
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
-				if (itemType == 1) {
+				if (itemType == ADD_NEWCAMCORDER) {
 					// Add a camcorder
 					Camcorder cc = inputCamcorder();
 					ResourceCentre.addCamcorder(camcorderList, cc);
