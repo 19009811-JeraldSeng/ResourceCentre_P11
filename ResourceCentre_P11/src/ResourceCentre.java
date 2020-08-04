@@ -5,6 +5,10 @@ public class ResourceCentre {
 	/**
 	 * 
 	 */
+	private static final int OPTION_ADDALLITEMS = 2;
+	/**
+	 * 
+	 */
 	private static final int OPTION_VIEWALLITEMS = 1;
 	/**
 	 * 
@@ -33,7 +37,7 @@ public class ResourceCentre {
 				ResourceCentre.viewAllCamcorder(camcorderList);
 				ResourceCentre.viewAllChromebook(chromebookList);
 
-			} else if (option == 2) {
+			} else if (option == OPTION_ADDALLITEMS) {
 				// Add a new item
 				ResourceCentre.setHeader("ADD");			
 				ResourceCentre.setHeader("ITEM TYPES");
