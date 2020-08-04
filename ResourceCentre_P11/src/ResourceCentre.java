@@ -2,6 +2,26 @@ import java.util.ArrayList;
 
 public class ResourceCentre {
 
+	/**
+	 * 
+	 */
+	private static final int OPTION_RETURNITEM = 4;
+	/**
+	 * 
+	 */
+	private static final int OPTION_LOANITEMS = 3;
+	/**
+	 * 
+	 */
+	private static final int OPTION_ADDALLITEMS = 2;
+	/**
+	 * 
+	 */
+	private static final int OPTION_VIEWALLITEMS = 1;
+	/**
+	 * 
+	 */
+	private static final int END_LOOP = 5;
 	public static void main(String[] args) {
 
 		ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
@@ -13,18 +33,19 @@ public class ResourceCentre {
 		chromebookList.add(new Chromebook("CB002", "HP Chromebook", "Win 10"));
 
 		int option = 0;
+		//Syakir
+		while (option != END_LOOP) {
 
-		while (option != 5) {
-
-			ResourceCentre.menu();
+			ResourceCentre.resourceCentreMenu();
 			option = Helper.readInt("Enter an option > ");
 
-			if (option == 1) {
+			//Syakir
+			if (option == OPTION_VIEWALLITEMS) {
 				// View all items
 				ResourceCentre.viewAllCamcorder(camcorderList);
 				ResourceCentre.viewAllChromebook(chromebookList);
 
-			} else if (option == 2) {
+			} else if (option == OPTION_ADDALLITEMS) {
 				// Add a new item
 				ResourceCentre.setHeader("ADD");
 				ResourceCentre.setHeader("ITEM TYPES");
@@ -47,7 +68,8 @@ public class ResourceCentre {
 					System.out.println("Invalid type");
 				}
 
-			} else if (option == 3) {
+			//Syakir
+			} else if (option == OPTION_LOANITEMS) {
 				// Loan item
 				ResourceCentre.setHeader("LOAN");
 				ResourceCentre.setHeader("ITEM TYPES");
@@ -65,8 +87,8 @@ public class ResourceCentre {
 				} else {
 					System.out.println("Invalid type");
 				}
-
-			} else if (option == 4) {
+			//Syakir
+			} else if (option == OPTION_RETURNITEM) {
 				// Return item
 				ResourceCentre.setHeader("RETURN");
 				ResourceCentre.setHeader("ITEM TYPES");
@@ -93,8 +115,9 @@ public class ResourceCentre {
 		}
 
 	}
-
-	public static void menu() {
+	
+	//Syakir
+	public static void resourceCentreMenu() {
 		ResourceCentre.setHeader("RESOURCE CENTRE APP");
 		System.out.println("1. Display Inventory");
 		System.out.println("2. Add item");
