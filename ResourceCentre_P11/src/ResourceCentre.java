@@ -5,6 +5,10 @@ public class ResourceCentre {
 	/**
 	 * 
 	 */
+	private static final int OPTION_VIEWALLITEMS = 1;
+	/**
+	 * 
+	 */
 	private static final int END_LOOP = 5;
 	public static void main(String[] args) {
 
@@ -23,7 +27,7 @@ public class ResourceCentre {
 			ResourceCentre.menu();
 			option = Helper.readInt("Enter an option > ");
 
-			if (option == 1) {
+			if (option == OPTION_VIEWALLITEMS) {
 				// View all items
 				ResourceCentre.viewAllCamcorder(camcorderList);
 				ResourceCentre.viewAllChromebook(chromebookList);
